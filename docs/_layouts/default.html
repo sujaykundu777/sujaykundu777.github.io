@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{site.title}} - {{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 
@@ -22,8 +23,9 @@
     </main>
     <footer>
         <!-- Footer content -->
-         <h2> Built by Sujay Kundu</h2>
+         <p> Built by <a href="https://sujaykundu.com">Sujay Kundu</a></p>
     </footer>
+
     <script>
         let scale = 1;
 
@@ -38,9 +40,21 @@
                 document.getElementById("resumeBox").style.transform = `scale(${scale})`;
             }
         }
+
         function downloadPDF() {
-            alert("PDF Download functionality not implemented yet");
+            // reset scale to 1
+            scale = 1;
+            document.getElementById("resumeBox").style.transform = `scale(${scale})`;
+            const resumeElement = document.getElementById("resumeBox");
+            var opt =  {
+                filename: 'resume.pdf',
+                enableLinks: true,
+                jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+            };
+
+            html2pdf().set(opt).from(resumeElement).save();
         }
+        
         function visitWebsite() {
             window.open('{{ site.portfolio_url | relative_url }}', '_blank');
         }
