@@ -18,13 +18,14 @@ email: sujaykundu777@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Sujay Kundu is a Full Stack Web Developer specialized in building performant and scalable web applications.
 baseurl: "" # the subpath of your site, e.g. /blog
+portfolio_url: https://sujaykundu.com
 url: "https://sujaykundu777.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: xplor4r
 github_username:  sujaykundu777
 
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{site.title}} - {{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"> 
+</head>
+<body>
+
+<header class="resume-header">
+    <div class="title">{{site.title}}'s Resume</div>
+    <div class="actions">
+        <button onclick="zoomIn()">🔍+</button>
+        <button onclick="zoomOut()">🔍-</button>
+        <button onclick="downloadPDF()">📄 Download PDF</button>
+        <button onclick="visitWebsite()">🌐 Visit Website</button>
+    </div>
+</header>
+    <main>
+        {{ content }}
+    </main>
+    <footer>
+        <!-- Footer content -->
+         <h2> Built by Sujay Kundu</h2>
+    </footer>
+    <script>
+        let scale = 1;
+
+        function zoomIn() {
+            scale += 0.1;
+            document.getElementById("resumeBox").style.transform = `scale(${scale})`;
+        }
+
+        function zoomOut() {
+            if (scale > 0.5) {
+                scale -= 0.1;
+                document.getElementById("resumeBox").style.transform = `scale(${scale})`;
+            }
+        }
+        function downloadPDF() {
+            alert("PDF Download functionality not implemented yet");
+        }
+        function visitWebsite() {
+            window.open('{{ site.portfolio_url | relative_url }}', '_blank');
+        }
+    </script>
+</body>
+</html>
