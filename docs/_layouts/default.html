@@ -45,14 +45,17 @@
             // reset scale to 1
             scale = 1;
             document.getElementById("resumeBox").style.transform = `scale(${scale})`;
-            const resumeElement = document.getElementById("resumeBox");
-            var opt =  {
-                filename: 'resume.pdf',
-                enableLinks: true,
-                jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
-            };
 
-            html2pdf().set(opt).from(resumeElement).save();
+            if (scale === 1 ) {
+                const resumeElement = document.getElementById("resumeBox");
+                var opt =  {
+                    filename: 'resume.pdf',
+                    enableLinks: true,
+                    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+                };
+
+                html2pdf().set(opt).from(resumeElement).save();
+             }
         }
         
         function visitWebsite() {
