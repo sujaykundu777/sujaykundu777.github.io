@@ -1,23 +1,51 @@
 [
     {
+       "category": "Languages",
+       "display": true,
+       "skills": [
+                {
+                    "name": "English",
+                    "level": "Fluent"
+                },
+                {
+                    "name": "Hindi",
+                    "level": "Fluent"
+                },
+                {
+                    "name": "Bengali",
+                    "level": "Fluent"
+                }
+            ]
+    },
+    {
         "category": "Programming Languages",
+        "display": true,
         "skills": [
             {
                 "name": "Python",
-                "level": "Advanced"
-            },
-            {
-                "name": "JavaScript",
                 "level": "Intermediate"
             },
             {
+                "name": "JavaScript",
+                "level": "Advanced"
+            },
+            {
+                "name": "Java",
+                "level": "Beginner"
+            }, 
+            {
                 "name": "C++",
+                "level": "Beginner"
+            },
+            {
+                "name": "Ruby",
                 "level": "Beginner"
             }
         ]
     },
     {
         "category": "Web Development",
+        "display": true,
         "skills": [
             {
                 "name": "HTML",
@@ -29,12 +57,69 @@
             },
             {
                 "name": "React",
+                "level": "Advanced"
+            },
+            {
+                "name": "TypeScript",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Vue",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Next.js",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Tanstack",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Jekyll",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Tailwind",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Bootstrap",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Sass",
+                "level": "Intermediate"
+            },
+            {
+                "name": "WordPress",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Mongodb",
+                "level": "Intermediate"
+            },
+            {
+                "name": "SQL",
+                "level": "Intermediate"
+            },
+            {
+                "name": "GraphQL",
+                "level": "Intermediate"
+            },
+            {
+                "name": "React Native",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Electron",
                 "level": "Intermediate"
             }
         ]
     },
     {
         "category": "Tools & Platforms",
+        "display": true,
         "skills": [
             {
                 "name": "Git",
@@ -46,6 +131,18 @@
             },
             {
                 "name": "Linux",
+                "level": "Intermediate"
+            },
+            {
+                "name": "AWS",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Firebase",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Vercel",
                 "level": "Intermediate"
             }
         ]

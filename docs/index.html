@@ -6,32 +6,33 @@ layout: default
 <div class="canvas-container">
     <div id="resumeBox">
         <div class="resumeHeader">
-            <div class="resumeTitle">Sujay Kundu</div>
+            <div class="resumeTitle">{{site.data.resume.profile.name}}</div>
             <div class="resumeInfoLinks">
-                <a href="tel:91961169873"> +91 9611698736 </a> | <a href="mailto:sujaykundu777@gmail.com"> sujaykundu777@gmail.com </a> | <a href="https://sujaykundu.com"> sujaykundu.com </a> | <a href="https://github.com/sujaykundu777">github.com/sujaykundu777</a> | <a href="https://linkedin.com/in/sujaykundu">linkedin.com/in/sujaykundu</a>
+                <a href='tel:{{site.data.resume.profile.phone}}'> {{site.data.resume.profile.phone}} </a> | <a href="mailto:{{site.data.resume.profile.email}}"> {{site.data.resume.profile.email}} </a> | <a href="{{site.data.resume.profile.website}}"> {{site.data.resume.profile.website}}</a> | <a href="https://github.com/{{site.data.resume.profile.github_username}}">github.com/{{site.data.resume.profile.github_username}}</a> | <a href="https://linkedin.com/in/{{site.data.resume.profile.linkedin_username}}">linkedin.com/in/{{site.data.resume.profile.linkedin_username}} </a>
+                 <br />{{site.data.resume.profile.location.city}}, {{site.data.resume.profile.location.country}}
             </div>
         </div>
         <div class="resumeSectionContainer">
-            Full stack engineer with ~6 years in the Javascript ecosystem experienced in software development for large-scale enterprise
-            services and product focused SaaS startups. Passionate about creating scalable user-centric solutions and sharing the knowledge
-            through blogs and open source contributions.
+           {{site.data.resume.profile.summary}}
         </div>
         <div class="resumeSectionContainer">
             <h1 class="section-heading">Skills</h1>
             <hr /> 
             <table>
-                <tr>
-                    <td><b>Languages:</b></td>
-                    <td>JavaScript, TypeScript, Ruby, HTML/CSS, SAAS, PostgreSQL, MongoDB, Tailwind, Shadcn UI, Tanstack Query</td>
-                </tr>
-                <tr>
-                    <td><b>Frameworks/Libs:</b></td>
-                    <td>React, Vue, React Native, Node.js, Express, Nextjs, Graphql, Web components, Wordpress, Jekyll, Ollama</td>
-                </tr>
-                <tr>
-                    <td><b>Cloud Technologies:</b></td>
-                    <td>Amazon Web Services (AWS), Supabase, Git, Docker, Vercel</td>
-                </tr>
+                {% for skill_obj in site.data.resume.skills %}
+                    {% if skill_obj.display %}
+                    <tr>
+                        <td><b>{{ skill_obj.category }}:</b></td>
+                        <td>
+                            {% for skill in skill_obj.skills %}
+                                {%- if forloop.length > 0 -%}
+                                    {{ skill.name }}{% unless forloop.last %}, {% endunless -%}
+                                {%- endif -%}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    {% endif %}
+                {% endfor %}
             </table>
         </div>
         <div class="resumeSectionContainer">
