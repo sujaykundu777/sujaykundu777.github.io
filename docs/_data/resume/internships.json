@@ -1,0 +1,19 @@
+[
+    {
+        "company": "Skillenza",
+        "role": "Intern",
+        "location": "Bangalore, India",
+        "startDate": "2019-05",
+        "endDate": "2019-08",
+        "project": "Hackathon based Hiring Platform - Skillenza web application",
+        "projectLink": "https://skillenza.com",
+        "description": "Built tools to automate deployment pipelines and monitored system health.",
+        "technologies": ["React", "Redux", "Node.js", "Express", "MongoDB", "Jest"],
+        "responsibilities": [
+            "Developed and maintained cloud-based applications.",
+            "Optimized system performance and scalability.",
+            "Collaborated with cross-functional teams to define, design, and ship new features.",
+            "Participated in code reviews and provided feedback to other developers."
+        ]
+    }
+]

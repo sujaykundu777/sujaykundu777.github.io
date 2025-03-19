@@ -1,0 +1,70 @@
+[
+    {
+        "name": "Wealth Assist",
+        "description": "A financial planning app for managing investments and savings using AI.",
+        "url": "https://wealth-assist-ai.vercel.app/",
+        "technologies": ["React", "Nextjs", "Tailwind", "ShadcnUI", "Tanstack", "Langchain"],
+        "date": "2022-10-20",
+        "display": true,
+        "features": [
+            "AI-Powered Insights",
+            "Income, Expenses and Budget Tracking",
+            "Savings Planner"
+        ]
+    },
+    {
+        "name": "Pokedex",
+        "description": "A Pokedex app to explore and discover Pokemon species.",
+        "url": "https://pokedex-react-redux-wheat.vercel.app",
+        "technologies": ["React", "Nextjs", "KendoUI", "PokeAPI"],
+        "date": "2022-11-15",
+        "display": true,
+        "features": [
+            "Pokemon Search",
+            "Type Chart",
+            "Evolution Chain"
+        ]
+    },
+    {
+        "name": "Personal Portfolio",
+        "description": "A personal portfolio website to showcase projects and skills.",
+        "url": "https://sujaykundu.com",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "date": "2023-01-15",
+        "display": true,
+        "features": [
+            "Responsive Design",
+            "Project Gallery",
+            "Contact Form"
+        ]
+    },
+    {
+        "name": "Devlopr Jekyll ",
+        "description": "A static site generator for developers to build personal websites and blogs.",
+        "url": "https://devlopr.netlify.app",
+        "technologies": ["Jekyll", "Sass", "Liquid", "Bootstrap", "Jquery"],
+        "date": "2023-02-10",
+        "display": true,
+        "features": [
+            "(Open Source) - (708 stars, 1010 forks)",
+            "Light and Dark Mode",
+            "Syntax Highlighting",
+            "SEO Optimized",
+            "CMS"
+        ]
+    },
+    {
+        "name": "Ritro UI",
+        "description": "A React UI library for building modern web applications.",
+        "url": "https://ritro-ui.dev",
+        "technologies": ["React", "Styled Components", "Material UI", "Storybook", "Framer Motion"],
+        "date": "2023-03-05",
+        "display": false,
+        "features": [
+            "web components",
+            "Component Library",
+            "Design System",
+            "Templates"
+        ]
+    }
+]

@@ -66,6 +66,7 @@ footer {
     align-items: center;
     height: 90vh;
     padding-top: 300px;
+    padding-bottom: 300px;
 }
  
 #resumeBox {
@@ -98,6 +99,7 @@ footer {
 }
 .section-heading {
     font-size: 15px;
+    line-height: 2px;
     font-weight: 600;
     color: #111;
 }
@@ -109,6 +111,10 @@ footer {
     padding-right: 30px;
     line-height: 14px;
     font-size: 13px;
+}
+.resumeProjectContainer {
+    line-height: 2px;
+    padding: 1px;
 }
 
 table {

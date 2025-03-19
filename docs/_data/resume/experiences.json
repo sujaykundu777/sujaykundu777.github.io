@@ -1,0 +1,53 @@
+[
+    {
+        "company": "Publicis Sapient",
+        "role": "Senior Frontend Engineer",
+        "location": "Bangalore, India",
+        "startDate": "2023-09",
+        "endDate": "Present",
+        "project": "Healthcare platform - Optum - Benefit Central web application",
+        "projectLink": "https://client.optum.com",
+        "description": "Developed scalable web applications and optimized backend services.",
+        "technologies": ["React", "Next", "Tanstack", "TypeScript", "Storybook", "Jest"],
+        "responsibilities": [
+            "Spearheaded the development of high-performance, accessible UI components for healthcare benefit central platform using Material UI and Optum's Skyline Design System.",
+            "Built and collaborated with other teams to develop Microfrontend's to integrate with Benefit central platform.",
+            "Optimized frontend performance by implementing lazy loading, code splitting, and server-side rendering, reducing the initial load time by 30%.",
+            "Integrated with backend services to fetch and display data using RESTful APIs and GraphQL, cutting API call overhead by 40%."
+        ]
+    },
+    {
+        "company": "Access Design Solutions",
+        "role": "Software Engineer",
+        "location": "Bangalore, India",
+        "startDate": "2021-07",
+        "endDate": "2023-08",
+        "project": "Manufacturing SaaS platform - Manufacton web & mobile",
+        "projectLink": "https://manufacton.com",
+        "description": "Worked on cloud-based solutions and improved system performance.",
+        "technologies": ["MERN", "React Native", "AWS", "Swagger", "Vue.js", "Docker"],
+        "responsibilities": [
+            "Led the frontend redesign of the Manufacton Web App using Vue 3, TypeScript, and Storybook, enhancing UI/UX and performance",
+            "Developed and maintained scalable backend services with Node.js, Express, MongoDB, Docker, and AWS, ensuring efficient data processing.",
+            "Designed and integrated RESTful APIs with Swagger documentation and Postman collections, streamlining API development and collaboration",
+            "Managed AWS-based server infrastructure, optimized deployments, and built live hybrid iOS apps using React Native and =code for cross-platform functionality."
+        ]
+    },
+    {
+        "company": "Katerra",
+        "role": "Software Engineer",
+        "location": "Bangalore, India",
+        "startDate": "2019-05",
+        "endDate": "2021-06",
+        "project": "Construction Management SaaS Platform - Apolla web application",
+        "projectLink": "https://apollo.katerra.com",
+        "description": "Developed and maintained cloud-based applications and optimized system performance.",
+        "technologies": ["AngularJS", "Mocha", "Node.js", "Express", "MongoDB", "Swagger", "Postman"],
+        "responsibilities": [
+            "Developed and maintained scalable backend services using Node.js, Express, Docker, and AWS, ensuring high performance and reliability.",
+            "Designed and implemented RESTful APIs with third-party integrations, maintaining comprehensive documentation using Postman and ApiDocs.",
+            "Built and optimized test-driven microservices in a multi-tenant, Docker-based architecture, enhancing system maintainability.",
+            "Collaborated with cross-functional teams in an Agile/Scrum environment to gather and refine requirements, aligning development with business objectives."
+        ]
+    }
+]

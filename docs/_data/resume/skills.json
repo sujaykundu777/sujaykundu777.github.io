@@ -1,0 +1,53 @@
+[
+    {
+        "category": "Programming Languages",
+        "skills": [
+            {
+                "name": "Python",
+                "level": "Advanced"
+            },
+            {
+                "name": "JavaScript",
+                "level": "Intermediate"
+            },
+            {
+                "name": "C++",
+                "level": "Beginner"
+            }
+        ]
+    },
+    {
+        "category": "Web Development",
+        "skills": [
+            {
+                "name": "HTML",
+                "level": "Advanced"
+            },
+            {
+                "name": "CSS",
+                "level": "Intermediate"
+            },
+            {
+                "name": "React",
+                "level": "Intermediate"
+            }
+        ]
+    },
+    {
+        "category": "Tools & Platforms",
+        "skills": [
+            {
+                "name": "Git",
+                "level": "Advanced"
+            },
+            {
+                "name": "Docker",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Linux",
+                "level": "Intermediate"
+            }
+        ]
+    }
+]

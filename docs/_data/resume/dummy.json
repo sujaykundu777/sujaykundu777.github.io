@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Blog Platform",
+        "description": "A simple blog platform built with Jekyll.",
+        "url": "https://example.com/blog",
+        "technologies": ["Jekyll", "Markdown", "Liquid"],
+        "date": "2023-02-10"
+    },
+    {
+        "name": "E-commerce Store",
+        "description": "An online store for selling products.",
+        "url": "https://example.com/store",
+        "technologies": ["React", "Node.js", "MongoDB"],
+        "date": "2023-03-05"
+    },
+    {
+        "name": "Weather App",
+        "description": "A weather forecasting app using OpenWeather API.",
+        "url": "https://example.com/weather",
+        "technologies": ["Vue.js", "Axios", "API"],
+        "date": "2023-04-20"
+    },
+    {
+        "name": "Task Manager",
+        "description": "A task management tool to organize daily activities.",
+        "url": "https://example.com/tasks",
+        "technologies": ["Angular", "TypeScript", "Firebase"],
+        "date": "2023-05-30"
+    }
+]

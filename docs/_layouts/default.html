@@ -6,6 +6,7 @@
     <title>{{site.title}} - {{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/preview.js"></script>
 </head>
 <body>
 
@@ -29,44 +30,6 @@
         <div>
          <p> Generate your Resume</p>
         </div>
-
     </footer>
-
-    <script>
-        let scale = 1;
-
-        function zoomIn() {
-            scale += 0.1;
-            document.getElementById("resumeBox").style.transform = `scale(${scale})`;
-        }
-
-        function zoomOut() {
-            if (scale > 0.5) {
-                scale -= 0.1;
-                document.getElementById("resumeBox").style.transform = `scale(${scale})`;
-            }
-        }
-
-        function downloadPDF() {
-            // reset scale to 1
-            scale = 1;
-            document.getElementById("resumeBox").style.transform = `scale(${scale})`;
-
-            if (scale === 1 ) {
-                const resumeElement = document.getElementById("resumeBox");
-                var opt =  {
-                    filename: 'resume.pdf',
-                    enableLinks: true,
-                    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
-                };
-
-                html2pdf().set(opt).from(resumeElement).save();
-             }
-        }
-        
-        function visitWebsite() {
-            window.open('{{ site.portfolio_url | relative_url }}', '_blank');
-        }
-    </script>
 </body>
 </html>
