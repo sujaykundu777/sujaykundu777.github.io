@@ -1,0 +1,19 @@
+{
+
+  "name": "resume-builder",
+  "version": "1.0.0",
+  "description": "Resume builder",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-terser": "^2.1.0"
+  },
+  "scripts": {
+    "minify": "gulp minify-js",
+    "start": "npm run minify && bundle exec jekyll serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sujay Kundu",
+  "license": "ISC"
+}

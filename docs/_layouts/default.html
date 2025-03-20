@@ -6,9 +6,9 @@
     <title>{{site.title}} - {{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./assets/js/preview.js"></script>
-    <script src="./assets/js/templateSwitcher.js"></script>
-    <script src="./assets/js/makerwidget.js"></script>
+    <script src="./assets/js/minified/preview.js"></script>
+    <script src="./assets/js/minified/templateSwitcher.js"></script>
+    <script src="./assets/js/minified/makerwidget.js"></script>
 </head>
 <body>
 
@@ -18,12 +18,12 @@
         <button onclick="zoomIn()">🔍+</button>
         <button onclick="zoomOut()">🔍-</button>
         <select id="templateSelect" class="templateSwitcher" onchange="switchTemplate(this.value)">
-            <option value="template1">Template 1</option>
-            <option value="template2">Template 2</option>
-            <option value="template3">Template 3</option>
+            {% for template in site.data.templates.templates %}
+            <option value="{{ template.name }}">{{ template.name | capitalize }}</option>
+            {% endfor %}
         </select>
         <button onclick="downloadPDF()">📄 Download PDF</button>
-        <button onclick="visitWebsite()">🌐 Visit Website</button>
+        <!-- <button onclick="visitWebsite()">🌐 Visit Website</button> -->
     </div>
 </header>
     <main>
@@ -31,21 +31,9 @@
     </main>
     <footer>
         <!-- Footer content -->
-         <div>
-         <!-- <p> Built by <a href="https://sujaykundu.com">Sujay Kundu</a></p> -->
-        </div>
-        <div>
+        <!-- <div>
          <p> Generate your Resume</p>
-        </div>
+        </div> -->
     </footer>
-    <!-- <script>
-        function switchTemplate(templateName) {
-            document.querySelectorAll('.template').forEach(template => {
-                template.style.display = 'none';
-            });
-            document.getElementById(templateName).style.display = 'block';
-        }
-    </script> -->
-
 </body>
 </html>

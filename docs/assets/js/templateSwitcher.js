@@ -37,6 +37,11 @@ function switchTemplate(templateName) {
 function loadTemplateOnPageLoad() {
     // get the selected template from local storage
     const savedTemplate = localStorage.getItem('selectedTemplate');
+
+    if (!savedTemplate) {
+        // if no template is saved, load the default template
+        switchTemplate('template1');
+    }
     
     // switch to the saved template
     if (savedTemplate) {

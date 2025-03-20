@@ -4,17 +4,21 @@ layout: default
 ---
  
 <div class="canvas-container">
-    <div id="resumeBox">
-    <!--     
-        <div id="template1" class="template" style="display: block;">
-            {% include templates/template1.html %}
-        </div>
-    -->
-        {% for template in site.data.templates.templates %}
-        <div id="{{ template.name }}" class="template" style="display: none;">
-            {% include {{ template.file }} %}
-        </div>
-        {% endfor %}
+    <div class="draggable">
+        <div style="margin-top: 70px;">
+        <div id="resumeBox">
+            <!--     
+            <div id="template1" class="template" style="display: block;">
+                {% include templates/template1.html %}
+            </div>
+        -->
+            {% for template in site.data.templates.templates %}
+            <div id="{{ template.name }}" class="template" style="display: none;">
+                {% include {{ template.file }} %}
+            </div>
+            {% endfor %}
     </div>
+    </div>
+</div>
     
 </div>
