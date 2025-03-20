@@ -1,0 +1,7 @@
+templates:
+  - name: template1
+    file: templates/template1.html
+  - name: template2
+    file: templates/template2.html
+  - name: template3
+    file: templates/template3.html

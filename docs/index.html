@@ -5,91 +5,16 @@ layout: default
  
 <div class="canvas-container">
     <div id="resumeBox">
-        <div class="resumeHeader">
-            <div class="resumeTitle">{{site.data.resume.profile.name}}</div>
-            <div class="resumeInfoLinks">
-                <a href='tel:{{site.data.resume.profile.phone}}'> {{site.data.resume.profile.phone}} </a> | <a href="mailto:{{site.data.resume.profile.email}}"> {{site.data.resume.profile.email}} </a> | <a href="{{site.data.resume.profile.website}}"> {{site.data.resume.profile.website}}</a> | <a href="https://github.com/{{site.data.resume.profile.github_username}}">github.com/{{site.data.resume.profile.github_username}}</a> | <a href="https://linkedin.com/in/{{site.data.resume.profile.linkedin_username}}">linkedin.com/in/{{site.data.resume.profile.linkedin_username}} </a>
-                 <br />{{site.data.resume.profile.location.city}}, {{site.data.resume.profile.location.country}}
-            </div>
+    <!--     
+        <div id="template1" class="template" style="display: block;">
+            {% include templates/template1.html %}
         </div>
-        <div class="resumeSectionContainer">
-           {{site.data.resume.profile.summary}}
+    -->
+        {% for template in site.data.templates.templates %}
+        <div id="{{ template.name }}" class="template" style="display: none;">
+            {% include {{ template.file }} %}
         </div>
-        <div class="resumeSectionContainer">
-            <h1 class="section-heading">Skills</h1>
-            <hr /> 
-            <table>
-                {% for skill_obj in site.data.resume.skills %}
-                    {% if skill_obj.display %}
-                    <tr>
-                        <td><b>{{ skill_obj.category }}:</b></td>
-                        <td>
-                            {% for skill in skill_obj.skills %}
-                                {%- if forloop.length > 0 -%}
-                                    {{ skill.name }}{% unless forloop.last %}, {% endunless -%}
-                                {%- endif -%}
-                            {% endfor %}
-                        </td>
-                    </tr>
-                    {% endif %}
-                {% endfor %}
-            </table>
-        </div>
-        <div class="resumeSectionContainer">
-            <h1 class="section-heading">Work experiences</h1>
-            <hr /> 
-            {% for experience in site.data.resume.experiences %}
-            <p><strong>{{ experience.company }}</strong> - {{ experience.role }} - {{ experience.location }} - ({{ experience.startDate }} - {{ experience.endDate }})</p>
-            <p><b><i>{{ experience.project }} - <a href="{{ experience.projectLink }}">{{ experience.projectLink }}</a></i></b></p>
-            <ul>
-                {% for responsibility in experience.responsibilities %}
-                <li>{{ responsibility }}</li>
-                {% endfor %}
-            </ul>
-            {% endfor %}
-        </div>
-
-        <div class="resumeSectionContainer">
-            <h1 class="section-heading">Projects</h1>
-            <hr />
-
-            {% for project in site.data.resume.projects %}
-              {% if project.display %}
-               <div class="resumeProjectContainer">
-                    <p><strong>{{ project.name }}</strong> - {{ project.description }} - <b><i><a href="{{ project.url }}">{{ project.url }}</a></i></b></p>
-                    <p>
-                        <em>Features</em>: 
-                        {% for feature in project.features %}
-                            {%- if forloop.length > 0 -%}
-                                {{ feature }}{% unless forloop.last %}, {% endunless -%}
-                            {%- endif -%}
-                        {% endfor %}
-                    </p>
-                    <p>
-                        <em>Technologies</em>: 
-                        {% for technology in project.technologies %}
-                            {%- if forloop.length > 0 -%}
-                                {{ technology }}{% unless forloop.last %}, {% endunless -%}
-                            {%- endif -%}
-                        {% endfor %}
-                    </p>
-                </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-
-        <div class="resumeSectionContainer">
-            <h1 class="section-heading">Education</h1>
-            <hr />
-
-            {% for education in site.data.resume.education %}
-              {% if education.display %}
-                <p><strong>{{ education.institution }}</strong> - {{ education.location }} - ({{ education.startDate }} - {{ education.endDate }}) - <i><a href="{{ education.url }}">{{ education.url }}</a></i></p>
-                <ul>
-                    <li>{{ education.degree }} - {{ education.grade }}</li>
-                </ul>
-              {% endif %}
-            {% endfor %}
-        </div>
+        {% endfor %}
     </div>
+    
 </div>
