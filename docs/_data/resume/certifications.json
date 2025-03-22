@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Frontend Web Development Certificate",
+        "institution": "freeCodeCamp",
+        "location": "Online",
+        "grade": "N/A",
+        "display": true,
+        "startDate": "2020-07",
+        "endDate": "2021-01",
+        "url": "https://www.freecodecamp.org/",
+        "description": "Completed the Responsive Web Design, JavaScript Algorithms and Data Structures, Front End Libraries, Data Visualization, APIs and Microservices, and Information Security and Quality Assurance sections. Developed various projects and participated in coding challenges."
+    },
+    {
+        "name": "Certified Javascript Developer",
+        "institution": "w3schools",
+        "location": "Online",
+        "grade": "N/A",
+        "display": true,
+        "startDate": "2020-07",
+        "endDate": "2020-08",
+        "url": "https://www.w3schools.com/",
+        "description": "Completed the JavaScript Tutorial and JavaScript Quiz. Developed various projects and participated in coding challenges."
+    }
+]

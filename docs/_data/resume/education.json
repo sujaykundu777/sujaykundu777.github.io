@@ -2,36 +2,40 @@
     {
       "degree": "Bachelor of Technology in Computer Science and Engineering",
       "institution": "Christ University Faculty of Engineering",
-      "location": "Bangalore, India",
+      "location": "Bangalore, KA, India",
       "grade": "6.9 CGPA",
       "display": true,
       "startDate": "2015-07",
       "endDate": "2019-06",
       "url": "https://www.christuniversity.in/",
-      "description": "Focused on software development, algorithms, and data structures. Participated and organized various coding competitions and hackathons during the course."
+      "description": "Focused on software development, algorithms, and data structures. Participated and organized various coding competitions and hackathons during the course.",
+      "template-1": true,
+      "template-2": true
     },
     {
-        "degree": "Bachelor of Science in Computer Science",
-        "institution": "University of Example",
-        "location": "Example City, Country",
-        "start_date": "2015-08-01",
-        "end_date": "2019-05-01",
-        "description": "Focused on software development, algorithms, and data structures. Participated in various coding competitions and hackathons."
-    },
+        "degree": "Higher Secondary School Certificate",
+        "institution": "GNHSS - Gurunananak Pre-University College",
+        "location": "Ranchi, JH, India",
+        "grade": "65%",
+        "display": true,
+        "startDate": "2013-07",
+        "endDate": "2015-06",
+        "url": "https://www.gurunanakschool.com/",
+        "description": "Studied Physics, Chemistry, Mathematics, and Computer Science. Participated in various extracurricular activities and sports events.",
+        "template-1": false,
+        "template-2": true
+        },
     {
-        "degree": "Master of Science in Artificial Intelligence",
-        "institution": "Institute of Advanced Studies",
-        "location": "Example City, Country",
-        "start_date": "2020-09-01",
-        "end_date": "2022-06-01",
-        "description": "Specialized in machine learning, deep learning, and natural language processing. Completed a thesis on neural network optimization."
-    },
-    {
-        "degree": "High School Diploma",
-        "institution": "Example High School",
-        "location": "Example Town, Country",
-        "start_date": "2012-09-01",
-        "end_date": "2015-06-01",
-        "description": "Graduated with honors. Active member of the computer club and robotics team."
+        "degree": "Secondary School Certificate",
+        "institution": "MCCHS Mount Carmel Convent Senior Sec. School",
+        "location": "Bangalore, India",
+        "grade": "78%",
+        "display": true,
+        "startDate": "2003-07",
+        "endDate": "2013-06",
+        "url": "https://mcchsedu.in/",
+        "description": "Studied Mathematics, Science, Social Science, and English. Participated in various cultural events and sports competitions.",
+        "template-1": false,
+        "template-2": true
     }
 ]

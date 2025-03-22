@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Badminton",
+        "display": true,
+        "icon": "badminton",
+        "description": "I enjoy playing badminton with friends and family. It is a great way to stay active and have fun."
+    },
+    {
+        "name": "Reading",
+        "display": true,
+        "icon": "reading",
+        "description": "I am an avid reader and enjoy reading a variety of genres. It is a great way to learn new things and escape into different worlds."
+    },
+    {
+        "name": "Hiking",
+        "display": true,
+        "icon": "hiking",
+        "description": "I love hiking and exploring the great outdoors. It is a great way to stay active and enjoy nature."
+    },
+    {
+        "name": "Photography",
+        "display": true,
+        "icon": "photography",
+        "description": "I enjoy photography and capturing moments in time. It is a creative outlet for me and a way to express myself."
+    },
+    {
+        "name": "Traveling",
+        "display": true,
+        "icon": "traveling",
+        "description": "I love traveling and exploring new places. It is a great way to learn about different cultures and meet new people."
+    }
+]

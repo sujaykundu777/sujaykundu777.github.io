@@ -3,7 +3,7 @@
         <div class="resumeTitle">{{site.data.resume.profile.name}}</div>
         <div class="resumeInfoLinks">
             <a href='tel:{{site.data.resume.profile.phone}}'> {{site.data.resume.profile.phone}} </a> | <a href="mailto:{{site.data.resume.profile.email}}"> {{site.data.resume.profile.email}} </a> | <a href="{{site.data.resume.profile.website}}"> {{site.data.resume.profile.website}}</a> | <a href="https://github.com/{{site.data.resume.profile.github_username}}">github.com/{{site.data.resume.profile.github_username}}</a> | <a href="https://linkedin.com/in/{{site.data.resume.profile.linkedin_username}}">linkedin.com/in/{{site.data.resume.profile.linkedin_username}} </a>
-             <br />{{site.data.resume.profile.subtitle}} | {{site.data.resume.profile.location.city}}, {{site.data.resume.profile.location.country}}
+            <br />{{site.data.resume.profile.subtitle}} | {{site.data.resume.profile.location.city}}, {{site.data.resume.profile.location.country}}
         </div>
     </div>
     
@@ -79,7 +79,7 @@
         <hr />
 
         {% for education in site.data.resume.education %}
-          {% if education.display %}
+        {% if education.display and education.template-1 %}
             <p><strong>{{ education.institution }}</strong> - {{ education.location }} - ({{ education.startDate }} - {{ education.endDate }}) - <i><a href="{{ education.url }}">{{ education.url }}</a></i></p>
             <ul>
                 <li>{{ education.degree }} - {{ education.grade }}</li>

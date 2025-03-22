@@ -1,0 +1,59 @@
+/** Styles for Two Column resume template */
+
+.resumeTwoColumn-Template {
+    text-center: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 210mm; /* A4 width */
+}
+
+.resumeTwoColumn-Header {
+    text-align: center;
+    border-bottom: 1px dashed #ccc;
+}
+
+.resumeTwoColumn-Title {
+    padding-top: 10px;
+    font-size: 25px;
+}
+
+.resumeTwoColumn-Subtitle {
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.resumeTwoColumn-InfoLinks {
+    padding: 10px;
+}
+
+.resumeTwoColumn-SectionContainer {
+    padding: 2px;
+}
+
+.resumeTwoColumn-Container {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.resumeTwoColumn-Col1 {
+    width: 30%;
+    /* border: 1px solid #ccc; */
+}
+.resumeTwoColumn-Col2 {
+    width: 65%;
+    /* border: 1px solid #ccc; */
+}
+
+.resumeTwoColumn-SectionTitle {
+    padding: 2px;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.resumeTwoColumn-SectionContent {
+    padding: 2px;
+    font-size: 13px;
+}
