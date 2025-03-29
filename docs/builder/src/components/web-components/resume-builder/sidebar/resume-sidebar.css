@@ -1,0 +1,13 @@
+.resume-sidebar {
+    padding: 10px;
+}
+
+.bio-input {
+    background: #fff;
+    color: '#111';
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

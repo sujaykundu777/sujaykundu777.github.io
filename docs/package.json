@@ -11,8 +11,11 @@
   },
   "scripts": {
     "minify": "gulp minify-js",
-    "start": "npm run minify && bundle exec jekyll serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:react": "cd builder && npm run build:all",
+    "serve:jekyll": "npm run minify && bundle exec jekyll serve",
+    "dev": "npm run build:react && npm run serve:jekyll",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve:react": "cd builder && npm run dev"
   },
   "author": "Sujay Kundu",
   "license": "ISC"
