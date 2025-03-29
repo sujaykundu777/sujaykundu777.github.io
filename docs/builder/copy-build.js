@@ -28,9 +28,10 @@ const files = fs.readdirSync(reactBuildPath);
 
 // Find the hashed JS and CSS filenames
 const mainJs = files.find((file) => file.endsWith('.js'));
+console.log('mainJs', mainJs);
 const mainCss = files.find((file) => file.endsWith('.css'));
 
-if (mainJs && mainCss) {
+if (mainJs || mainCss) {
     let resumeHtml = fs.readFileSync(resumeHtmlPath, 'utf-8');
 
     // Replace the old JS and CSS filenames with the new hashed ones

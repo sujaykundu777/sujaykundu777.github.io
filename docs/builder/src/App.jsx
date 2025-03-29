@@ -1,18 +1,13 @@
-import { useState } from 'react'
-import './App.css'
+import Navbar from "./components/Navbar/Navbar";
+import ResumeBuilder from "./components/web-components/resume-builder/resume-builder";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
+      <Navbar />
+      <ResumeBuilder />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
