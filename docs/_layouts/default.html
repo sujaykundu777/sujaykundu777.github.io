@@ -195,6 +195,57 @@
             }
         });
     });
+
+    let isDragging = false;
+    let startX, startY, initialLeft, initialTop;
+    const resume = document.querySelector('.resumeTwoColumn-Template'); // or your canvas element
+
+    function getEventPosition(e) {
+        if (e.touches && e.touches.length) {
+            return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        } else {
+            return { x: e.clientX, y: e.clientY };
+        }
+    }
+
+    function dragStart(e) {
+        isDragging = true;
+        const pos = getEventPosition(e);
+        startX = pos.x;
+        startY = pos.y;
+        // Get current position
+        const rect = resume.getBoundingClientRect();
+        initialLeft = rect.left;
+        initialTop = rect.top;
+        document.body.style.userSelect = 'none';
+    }
+
+    function dragMove(e) {
+        if (!isDragging) return;
+        const pos = getEventPosition(e);
+        const dx = pos.x - startX;
+        const dy = pos.y - startY;
+        resume.style.position = 'fixed';
+        resume.style.left = (initialLeft + dx) + 'px';
+        resume.style.top = (initialTop + dy) + 'px';
+    }
+
+    function dragEnd(e) {
+        isDragging = false;
+        document.body.style.userSelect = '';
+    }
+
+    // Mouse events
+    resume.addEventListener('mousedown', dragStart);
+    window.addEventListener('mousemove', dragMove);
+    window.addEventListener('mouseup', dragEnd);
+
+    // Touch events
+    resume.addEventListener('touchstart', dragStart, { passive: false });
+    resume.addEventListener('touchmove', function(e) {
+        if (isDragging) e.preventDefault();
+    }, { passive: false });
+    window.addEventListener('touchend', dragEnd);
     </script>
 </body>
 </html>

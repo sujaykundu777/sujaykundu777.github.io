@@ -4,8 +4,8 @@ h1 {
  body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #7966e663;
-
+    background: #7966e63b;
+    background-image: url('https://www.transparenttextures.com/patterns/3px-tile.png');
 }
 footer {
     width: 95%;
