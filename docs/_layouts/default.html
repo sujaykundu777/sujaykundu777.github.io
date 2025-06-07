@@ -2,11 +2,8 @@
 <html>
 <head>
     {% include head.html %}
+  
     <style>
-
-        .canvas-container {
-            padding-bottom: 90px;
-        }
 
         .dynamic-island-navbar {
             position: fixed;
@@ -134,23 +131,14 @@
             }
         }
 
-        #resume-panzoom {
-            touch-action: none; /* Prevents default scrolling while panning/zooming */
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: transparent;
-        }
-
+      
     </style>
+   
 </head>
 <body>
 
     <main>
-        <div id="resume-panzoom">
+        <div>
         {{ content }}
         </div>
     </main>
@@ -178,109 +166,49 @@
             <!-- Zoom Out Icon -->
             <svg width="28" height="28" fill="none" stroke="currentColor"><circle cx="14" cy="14" r="10" stroke-width="2"/><line x1="10" y1="14" x2="18" y2="14" stroke-width="2"/></svg>
         </button>
+        <button title="Reset" onclick="resetResume()">
+            <!-- New Reset Icon (Circular Arrow) -->
+           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" 
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+            class="feather feather-rotate-ccw">
+                <polyline points="1 4 1 10 7 10"/>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+         </svg>
+
+        </button>
         <button title="Download" onclick="downloadPDF()">
             <!-- Download Icon -->
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 5v10"/>
-                <path d="M8 13l4 4 4-4"/>
-                <path d="M5 21h14"/>
-            </svg>
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v10"/><path d="M8 13l4 4 4-4"/><path d="M5 21h14"/></svg>
         </button>
         <button title="Settings" onclick="openDrawer()">
-            <!-- Settings Icon -->
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="14" cy="14" r="3"/>
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 8.6 15a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 13 8.6a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 13z"/>
-            </svg>
+            <!-- New Settings Icon (Minimal Gear) -->
+          <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg"  fill="none" stroke="currentColor" stroke-width="2" 
+     stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+  <circle cx="12" cy="12" r="3"/>
+  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 
+           1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 
+           1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 
+           1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 
+           1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 
+           1.65 0 0 0 1.82.33H9a1.65 
+           1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 
+           1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 
+           1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09
+           a1.65 1.65 0 0 0-1.51 1z"/>
+</svg>
+
         </button>
     </div>
 
-    
-    
-    <script>
+      <script>
     function openDrawer() {
         document.getElementById('settingsDrawer').classList.add('open');
     }
     function closeDrawer() {
         document.getElementById('settingsDrawer').classList.remove('open');
     }
-
-    // // Optional: Theme selection logic
-    // document.querySelectorAll('input[name="theme"]').forEach(radio => {
-    //     radio.addEventListener('change', function() {
-    //         if (this.value === 'dark') {
-    //             document.documentElement.setAttribute('data-theme', 'dark');
-    //         } else if (this.value === 'light') {
-    //             document.documentElement.setAttribute('data-theme', 'light');
-    //         } else {
-    //             document.documentElement.removeAttribute('data-theme');
-    //         }
-    //     });
-    // });
-
-    let isDragging = false;
-    let startX, startY, initialLeft, initialTop;
-    const resume = document.querySelector('.resumeTwoColumn-Template'); // or your canvas element
-
-    function getEventPosition(e) {
-        if (e.touches && e.touches.length) {
-            return { x: e.touches[0].clientX, y: e.touches[0].clientY };
-        } else {
-            return { x: e.clientX, y: e.clientY };
-        }
-    }
-
-    function dragStart(e) {
-        isDragging = true;
-        const pos = getEventPosition(e);
-        startX = pos.x;
-        startY = pos.y;
-        // Get current position
-        const rect = resume.getBoundingClientRect();
-        initialLeft = rect.left;
-        initialTop = rect.top;
-        document.body.style.userSelect = 'none';
-    }
-
-    function dragMove(e) {
-        if (!isDragging) return;
-        const pos = getEventPosition(e);
-        const dx = pos.x - startX;
-        const dy = pos.y - startY;
-        resume.style.position = 'fixed';
-        resume.style.left = (initialLeft + dx) + 'px';
-        resume.style.top = (initialTop + dy) + 'px';
-    }
-
-    function dragEnd(e) {
-        isDragging = false;
-        document.body.style.userSelect = '';
-    }
-
-    // Mouse events
-    resume.addEventListener('mousedown', dragStart);
-    window.addEventListener('mousemove', dragMove);
-    window.addEventListener('mouseup', dragEnd);
-
-    // Touch events
-    resume.addEventListener('touchstart', dragStart, { passive: false });
-    resume.addEventListener('touchmove', function(e) {
-        if (isDragging) e.preventDefault();
-    }, { passive: false });
-    window.addEventListener('touchend', dragEnd);
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        const elem = document.getElementById('resume-panzoom');
-        if (elem) {
-            const panzoom = Panzoom(elem, {
-                maxScale: 3,
-                minScale: 0.3,
-                contain: 'outside'
-            });
-            // Enable mouse wheel zoom
-            elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
-        }
-    });
     </script>
+    
+
 </body>
 </html>
