@@ -195,8 +195,8 @@
         </button>
     </div>
 
-    <script src="https://unpkg.com/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
-
+    
+    
     <script>
     function openDrawer() {
         document.getElementById('settingsDrawer').classList.add('open');
@@ -205,18 +205,18 @@
         document.getElementById('settingsDrawer').classList.remove('open');
     }
 
-    // Optional: Theme selection logic
-    document.querySelectorAll('input[name="theme"]').forEach(radio => {
-        radio.addEventListener('change', function() {
-            if (this.value === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'dark');
-            } else if (this.value === 'light') {
-                document.documentElement.setAttribute('data-theme', 'light');
-            } else {
-                document.documentElement.removeAttribute('data-theme');
-            }
-        });
-    });
+    // // Optional: Theme selection logic
+    // document.querySelectorAll('input[name="theme"]').forEach(radio => {
+    //     radio.addEventListener('change', function() {
+    //         if (this.value === 'dark') {
+    //             document.documentElement.setAttribute('data-theme', 'dark');
+    //         } else if (this.value === 'light') {
+    //             document.documentElement.setAttribute('data-theme', 'light');
+    //         } else {
+    //             document.documentElement.removeAttribute('data-theme');
+    //         }
+    //     });
+    // });
 
     let isDragging = false;
     let startX, startY, initialLeft, initialTop;
@@ -268,7 +268,7 @@
         if (isDragging) e.preventDefault();
     }, { passive: false });
     window.addEventListener('touchend', dragEnd);
-
+    
     document.addEventListener('DOMContentLoaded', function() {
         const elem = document.getElementById('resume-panzoom');
         if (elem) {
